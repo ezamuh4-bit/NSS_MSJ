@@ -1,0 +1,15 @@
+n=input()
+for i in range(n):
+    d=0
+    a,b,c=map(int, raw_input().split())
+    if a > b:
+        a,b = b,a
+    while True :
+        d+=1
+        if not d%2==0:
+            a+=b
+        else:
+            b+=a
+        if a>c or b>c:
+            break 
+    print d
